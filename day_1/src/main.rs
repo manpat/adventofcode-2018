@@ -1,8 +1,7 @@
-use std::fs;
 use std::collections::BTreeSet;
 
 fn main() {
-	let f = fs::read_to_string("input.txt").unwrap();
+	let f = include_str!("../input.txt");
 	let deltas = f.lines()
 		.map(str::parse::<i32>)
 		.map(Result::unwrap)
